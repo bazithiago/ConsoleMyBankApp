@@ -22,10 +22,10 @@ namespace ConsoleMyBankApp
             Console.WriteLine($"Conta corrente: {conta.getConta()}");
             Console.WriteLine($"Saldo: {conta.getSaldo()},00 reais");
 
-            double valorDepositado = 1;
+            double valorDepositado = 100;
             conta.Depositar(valorDepositado);
 
-            double valorSaque = 1;
+            double valorSaque = 0;
             conta.Sacar(valorSaque);
 
             Console.WriteLine($"Seu saldo é de {conta.getSaldo()},00 reais");
@@ -37,7 +37,11 @@ namespace ConsoleMyBankApp
             Console.WriteLine($"Seu novo saldo é de {conta.getSaldo()},00 reais");
             Console.WriteLine($"Saldo da Silvia é de = {contaSilvia.getSaldo()},00 reais");
 
+            ContaPoupanca contaPoupanca = new ContaPoupanca(cliente, 01, 0002);
 
+            conta.AplicacaoPoupanca(50, contaPoupanca);
+            Console.WriteLine($"Seu saldo da conta corrente é de {conta.getSaldo()},00 reais");
+            Console.WriteLine($"Seu saldo da conta poupança é de {contaPoupanca.getSaldo()},00 reais");
         }
     }
 }

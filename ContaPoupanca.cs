@@ -1,9 +1,9 @@
 using System;
 namespace ConsoleMyBankApp
 {
-    public class ContaCorrente : Conta
+    class ContaPoupanca : Conta
     {
-        public ContaCorrente(Cliente titular, int agencia, int conta)
+        public ContaPoupanca(Cliente titular, int agencia, int conta)
         {
             this.setTitular(titular);
             this.setAgencia(agencia);
